@@ -1,0 +1,7 @@
+services: 
+  - name: Traefik
+    description: Reverse proxy
+    endpoint: http://traefik.production.segurosfalabella.cloud/dashboard/
+  - name: Traefik2
+    description: Reverse proxy
+    endpoint: http://traefik.production.segurosfalabella.cloud/dashboard/    
