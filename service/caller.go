@@ -32,8 +32,8 @@ func (c *Caller) Request() (Response, error) {
 }
 
 // Call ...
-func Call() {
-	caller := Caller{Endpoint: "http://localhost:3000/health"}
+func Call(Enpoint string) {
+	caller := Caller{Endpoint: Enpoint}
 	response, err := caller.Request()
 
 	if err != nil {
