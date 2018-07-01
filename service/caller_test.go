@@ -3,7 +3,7 @@ package service_test
 import (
 	"testing"
 
-	"github.com/periculum/service"
+	"github.com/mrsangrin/periculum/service"
 )
 
 func TestService_Request(t *testing.T) {
