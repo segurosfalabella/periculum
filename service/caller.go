@@ -11,9 +11,9 @@ type Remote interface {
 	Request()
 }
 
-// Service ...
+// Caller ...
 type Caller struct {
-	ApiUrl string
+	Endpoint string
 }
 
 // Response ...
@@ -24,7 +24,7 @@ type Response struct {
 
 // Request ...
 func (c *Caller) Request() (Response, error) {
-	res, err := http.Get(c.ApiUrl)
+	res, err := http.Get(c.Endpoint)
 	if err != nil {
 		return Response{}, err
 	}
@@ -34,7 +34,7 @@ func (c *Caller) Request() (Response, error) {
 
 // Call ...
 func Call() {
-	caller := Caller{ApiUrl: "http://localhost:3000/health"}
+	caller := Caller{Endpoint: "http://localhost:3000/health"}
 	response, err := caller.Request()
 
 	if err != nil {

@@ -15,7 +15,7 @@ func TestService_Request(t *testing.T) {
 	}{
 		{
 			name:    "ShouldFailIfServiceUrlIsEmpty",
-			c:       service.Caller{ApiUrl: ""},
+			c:       service.Caller{Endpoint: ""},
 			want:    service.Response{},
 			wantErr: true,
 		},
