@@ -32,7 +32,7 @@ script:
   - go build
   - cd godogs && godog
 
-# after_success:
-#   - bash <(curl -s https://codecov.io/bash)
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 #   - docker build -t falabellacr/imperium-worker:${TRAVIS_COMMIT} .
 #   - docker push falabellacr/imperium-worker:${TRAVIS_COMMIT}
