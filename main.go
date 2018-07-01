@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/mrsangrin/periculum/service"
@@ -8,6 +9,11 @@ import (
 
 func main() {
 	remoteServiceURL := "http://localhost:3001/health"
-	service.Call(remoteServiceURL)
-	log.Println("here in main")
+	caller := service.Caller{Endpoint: remoteServiceURL}
+	response, err := caller.Request()
+
+	if err != nil {
+		log.Println("It's not possible fetch some status from api")
+	}
+	fmt.Printf("Status code %d", response.StatusCode)
 }
