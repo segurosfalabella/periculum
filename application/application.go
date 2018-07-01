@@ -3,6 +3,7 @@ package application
 import (
 	"io/ioutil"
 	"log"
+	"os"
 
 	yaml "gopkg.in/yaml.v2"
 )
@@ -25,7 +26,8 @@ func (c *RemoteServices) GetApps(filePATH string) *RemoteServices {
 	if err != nil {
 		log.Printf("yamlFile.Get err   #%v ", err)
 	}
-	err = yaml.Unmarshal(yamlFile, c)
+	ymlContent := []byte(os.ExpandEnv(string(yamlFile)))
+	err = yaml.Unmarshal(ymlContent, c)
 
 	if err != nil {
 		log.Fatalf("Unmarshal: %v", err)

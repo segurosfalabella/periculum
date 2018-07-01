@@ -1,7 +1,8 @@
+version: 3.2
 services: 
   - name: Traefik
     description: Reverse proxy
-    endpoint: http://traefik.production.segurosfalabella.cloud/dashboard/
-  - name: Traefik2
+    endpoint: ${TRAEFIK_URL}
+  - name: kong
     description: Reverse proxy
-    endpoint: http://traefik.production.segurosfalabella.cloud/dashboard/    
+    endpoint: ${KONG_URL}
