@@ -8,7 +8,6 @@ import (
 )
 
 func TestRemoteServices_GetApps(t *testing.T) {
-
 	tests := []struct {
 		name    string
 		c       application.RemoteServices
@@ -18,7 +17,7 @@ func TestRemoteServices_GetApps(t *testing.T) {
 		{
 			name:    "MustFetchServicesFromYmlFile",
 			c:       application.RemoteServices{},
-			want:    []application.Service{application.Service{Name: "dummy", Description: "dummy", Endpoint: "dummy"}},
+			want:    []application.Service{{Name: "dummy", Description: "dummy", Endpoint: "dummy"}},
 			wantErr: false,
 		},
 		{
