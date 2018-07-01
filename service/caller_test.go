@@ -25,23 +25,8 @@ func TestService_Request(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			_, err := tt.c.Request()
 			if (err != nil) == tt.wantErr {
-				//t.Errorf("Service.Request() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 		})
 	}
 }
-
-// func TestCall(t *testing.T) {
-// 	tests := []struct {
-// 		name string
-// 	}{
-// 		{name: "ShouldBeFail"},
-// 		{name: "ShouldNotFail"},
-// 	}
-// 	for range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			Call()
-// 		})
-// 	}
-// }

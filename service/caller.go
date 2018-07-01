@@ -28,8 +28,7 @@ func (c *Caller) Request() (Response, error) {
 	if err != nil {
 		return Response{}, err
 	}
-	serviceResponse := Response{StatusCode: res.StatusCode, Message: res.Status}
-	return serviceResponse, err
+	return Response{StatusCode: res.StatusCode, Message: res.Status}, err
 }
 
 // Call ...
