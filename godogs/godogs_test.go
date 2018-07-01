@@ -2,7 +2,7 @@ package main
 
 import "github.com/DATA-DOG/godog"
 
-func a(arg1 string) error {
+func aRemoteService() error {
 	return godog.ErrPending
 }
 
@@ -15,7 +15,7 @@ func notifyToStatusPage() error {
 }
 
 func FeatureContext(s *godog.Suite) {
-	s.Step(`^A "([^"]*)"$`, a)
+	s.Step(`^A remote service`, aRemoteService)
 	s.Step(`^I check artifact\'s healthness$`, iCheckArtifactsHealthness)
 	s.Step(`^notify to status page$`, notifyToStatusPage)
 }

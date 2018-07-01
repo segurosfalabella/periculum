@@ -4,6 +4,6 @@ Feature: Check api healthness
   I need to constant checking the healthness of an api
 
   Scenario: Check health of an API
-    Given A "api_url" 
+    Given A remote service
     When I check artifact's healthness 
-    Then notify the status page
+    Then notify to status page
