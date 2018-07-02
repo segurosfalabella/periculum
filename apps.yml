@@ -4,5 +4,11 @@ services:
     description: Reverse proxy
     endpoint: ${TRAEFIK_URL}
   - name: kong
-    description: Reverse proxy
+    description: Api Gateway
     endpoint: ${KONG_URL}
+  - name: Portainer
+    description: Swarm UI
+    endpoint: ${PORTAINER_URL}
+  - name: Elastic Search
+    description: Unified log platform and search
+    endpoint: ${ELASTICSEARCH_URL} 
