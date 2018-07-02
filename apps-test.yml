@@ -1,4 +1,0 @@
-services: 
-  - name: dummy
-    description: dummy
-    endpoint: dummy   
