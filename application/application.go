@@ -28,7 +28,6 @@ func (c *RemoteServices) GetApps(filePATH string) *RemoteServices {
 	}
 	ymlContent := []byte(os.ExpandEnv(string(yamlFile)))
 	err = yaml.Unmarshal(ymlContent, c)
-	
 	if err != nil {
 		log.Fatalf("Unmarshal: %v", err)
 	}
