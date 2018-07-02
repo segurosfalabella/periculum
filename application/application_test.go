@@ -9,14 +9,13 @@ import (
 )
 
 var tempFilePATH = "../tmp/apps.yml"
-
-func TestRemoteServices_GetApps(t *testing.T) {
-	var yamlFile = `version: 3.2	
+var yamlFile = `version: 3.2	
 services:
   - name: dummy
     description: dummy
     endpoint: dummy`
 
+func TestRemoteServices_GetApps(t *testing.T) {
 	ioutil.WriteFile(tempFilePATH, []byte(yamlFile), 0644)
 
 	tests := []struct {
