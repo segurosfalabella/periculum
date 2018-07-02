@@ -1,7 +1,14 @@
+version: 3.2
 services: 
   - name: Traefik
     description: Reverse proxy
-    endpoint: http://traefik.production.segurosfalabella.cloud/dashboard/
-  - name: Traefik2
-    description: Reverse proxy
-    endpoint: http://traefik.production.segurosfalabella.cloud/dashboard/    
+    endpoint: ${TRAEFIK_URL}
+  - name: kong
+    description: Api Gateway
+    endpoint: ${KONG_URL}
+  - name: Portainer
+    description: Swarm UI
+    endpoint: ${PORTAINER_URL}
+  - name: Elastic Search
+    description: Unified log platform and search
+    endpoint: ${ELASTICSEARCH_URL} 
